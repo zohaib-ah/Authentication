@@ -15,14 +15,14 @@ const app = express()
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({Credential: true}));
+app.use(cors({origin:process.env.FRONTEND , credentials: true}));
 
-app.use('api/v1/', Router);
+app.use('/api', router);
 
-
-app.get("/", (req, res) => {
-    res.send("Server is working")
+app.get('/', (req,res) => {
+    res.send("API WORKING")
 })
+
 
 app.listen(port, () => {
     console.log(`Server Started at Port: ${port}`)
