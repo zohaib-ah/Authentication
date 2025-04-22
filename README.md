@@ -59,7 +59,6 @@ npm start
 ```
 
 ---
-
 ### Frontend Setup
 
 ```bash
