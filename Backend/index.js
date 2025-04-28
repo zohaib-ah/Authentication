@@ -15,7 +15,7 @@ const app = express()
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin:process.env.FRONTEND , credentials: true}));
+app.use(cors({origin:process.env.FRONTEND || 'http://localhost:80', credentials: true}));
 
 app.use('/api', router);
 
